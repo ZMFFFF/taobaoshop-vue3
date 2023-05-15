@@ -8,6 +8,8 @@ const app = createApp(App);
 // 组件
 import HeaderNav from "@/components/HeaderNav.vue";
 app.component("HeaderNav", HeaderNav);
+import Footer from "../src/components/Footer.vue";
+app.component("Footer", Footer);
 
 app.use(router);
 

@@ -5,5 +5,6 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
     <HeaderNav></HeaderNav>
     <RouterView />
+    <Footer></Footer>
 </template>
 
