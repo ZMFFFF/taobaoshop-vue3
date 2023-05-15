@@ -1,7 +1,23 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 var inpVal = ref(null);
+
+const route = useRoute();
+const router = useRouter();
+
+watch(route, (a, b) => {
+    if (a.query.keyword) {
+        inpVal.value = a.query.keyword;
+    } else {
+        inpVal.value = null;
+    }
+});
+
+function search() {
+    router.push(`/search?keyword=${inpVal.value}`);
+}
 </script>
 
 <template>
